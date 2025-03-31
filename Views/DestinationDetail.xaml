@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="travel.Views.DestinationDetail"
+             Title="Detalle">
+    <ScrollView>
+        <VerticalStackLayout Padding="20">
+            <!-- Imagen del destino -->
+            <Frame CornerRadius="20" HasShadow="False">
+                <Image Source="{Binding ImageUrl}" Aspect="AspectFill"
+                       HeightRequest="300" WidthRequest="400"/>
+            </Frame>
+
+            <!-- Nombre del destino -->
+            <Label Text="{Binding Name}" FontSize="22" FontAttributes="Bold"
+                   TextColor="Black" Margin="0,10,0,5"/>
+
+            <!-- Información adicional -->
+            <HorizontalStackLayout Spacing="20">
+                <VerticalStackLayout>
+                    <Label Text="{Binding Beds}" FontSize="18" TextColor="Black"/>
+                    <Label Text="Beds" FontSize="12" TextColor="Gray"/>
+                </VerticalStackLayout>
+                <VerticalStackLayout>
+                    <Label Text="{Binding Nights}" FontSize="18" TextColor="Black"/>
+                    <Label Text="Nights" FontSize="12" TextColor="Gray"/>
+                </VerticalStackLayout>
+                <VerticalStackLayout>
+                    <Label Text="{Binding Price}" FontSize="18" TextColor="Black"/>
+                    <Label Text="Per night" FontSize="12" TextColor="Gray"/>
+                </VerticalStackLayout>
+            </HorizontalStackLayout>
+
+            <!-- Botón de acción -->
+            <Button Text="See available flights"
+                    BackgroundColor="#FF6F91"
+                    TextColor="White"
+                    CornerRadius="20"
+                    Padding="15"
+                    Margin="0,20,0,0"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

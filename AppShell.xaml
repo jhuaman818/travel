@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="travel.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:travel"
+    xmlns:travel="clr-namespace:travel.Views"
+    xmlns:destination="clr-namespace:travel.Views"
+    Shell.FlyoutBehavior="Flyout"
+    Title="travel">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+    <ShellContent
+    Title="Login"
+    ContentTemplate="{DataTemplate travel:Login}"
+    Route="LoginPage" />
+
+    <ShellContent
+    Title="Inicio"
+    ContentTemplate="{DataTemplate travel:Inicio}"
+    Route="InicioPage" />
+
+    <ShellContent
+    Title="Vuelos"
+    ContentTemplate="{DataTemplate travel:Flights}"
+    Route="FlightsPage" />
+
+    <ShellContent
+    Title="detallado"
+    ContentTemplate="{DataTemplate travel:DestinationDetail}"
+    Route="DestinationDetailPage" />
+
+
+
+</Shell>

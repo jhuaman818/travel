@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="travel.Views.Login"
+             Title="Login" BackgroundColor="Aqua">
+    <VerticalStackLayout Padding="30" VerticalOptions="Center" BackgroundColor="Aqua">
+
+        <Frame Padding="20" CornerRadius="20" BackgroundColor="White" 
+           BorderColor="Pink" HasShadow="True">
+
+            <VerticalStackLayout Spacing="15">
+
+                <Label Text="Login" FontSize="28" FontAttributes="Bold" 
+                   HorizontalOptions="Center" TextColor="Black"/>
+
+                <Border Stroke="Pink" StrokeThickness="2" StrokeShape="RoundRectangle 15">
+                    <Entry Text="{Binding Email}" Placeholder="Email" Keyboard="Email"
+                       TextColor="Black" BackgroundColor="Transparent" 
+                       Margin="5" />
+                </Border>
+
+                <Border Stroke="Pink" StrokeThickness="2" StrokeShape="RoundRectangle 15">
+                    <Entry Text="{Binding Password}" Placeholder="Password" IsPassword="True"
+                       TextColor="Black" BackgroundColor="Transparent"
+                       Margin="5" />
+                </Border>
+
+                <Border Stroke="Pink" StrokeThickness="2" StrokeShape="RoundRectangle 15">
+                    <Button Text="Login"
+                        BackgroundColor="Pink" TextColor="White" 
+                        Command="{Binding LoginCommand}"
+                        CornerRadius="15" Padding="10"/>
+                </Border>
+
+                <Label Text="{Binding ErrorMessage}" TextColor="Red"
+                   IsVisible="{Binding IsErrorVisible}" 
+                   HorizontalOptions="Center"/>
+
+            </VerticalStackLayout>
+        </Frame>
+
+    </VerticalStackLayout>
+</ContentPage>
